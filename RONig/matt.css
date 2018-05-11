@@ -1,0 +1,215 @@
+body, div, section, article, sidebar, nav, header, footer{ 
+     display: block; 
+} 
+header img{
+    border-radius: 100%;
+    width: 60px;
+}
+header ul a{
+    color:  #d4d113;
+    text-decoration: none;
+    margin-right: 130px;
+}
+header ul a:hover{
+    color: d4d113;
+    font-size: 12px;
+}
+header ul li {
+    list-style-type: none;
+    display: inline;
+}
+header ul{
+    border: 1px silver solid;
+    background-color: rgb(33, 33, 58);
+    padding: 10px;
+}
+header ul a:active{
+    color: beige;
+}
+.searchinput{
+    margin-left: 1000px;
+    border: 1px solid black;
+    border-radius: 40px;
+    margin-top: -35px;
+    display: flex;
+}
+#menu li{
+    line-height: 30px;
+    list-style-type: none;
+}
+#menu li a{
+    text-decoration: none;
+}
+.main-section{
+    display: flex;
+}
+sidebar{
+    border: 2px solid black;
+    background-color:  #2a292c;
+}
+.span:before{ 
+    content: '(';
+}
+.span:after{
+    content: ')';
+}
+article{
+    border: 1px solid rgb(36, 36, 37);
+   overflow: hidden;
+    width: 1125px;
+    margin-left: 2px;
+    background-color: #383a3b;
+}
+sidebar h3 a{
+    color:black;
+    text-decoration: none;
+    background-color:  #d4d113;
+}
+sidebar li a{
+    color:rgb(233, 227, 142);
+    text-decoration: none;
+}
+sidebar h3{
+    border: 1px solid #2e022c;
+    background-color:  #d4d113;
+    margin-left: 40px;
+    padding: 8px;
+    margin-left: 0px;
+    margin-top: 0px;
+}
+sidebar li{
+    margin-left: -29px;
+}
+#article-heading{
+    text-align: center;
+    color: #141400;
+    text-shadow: 2px 2px 2px #eeea0a ;
+    font-size: 30px;
+}
+h1::after{
+    display: block;
+    content: '';
+    border-bottom: 3px solid #eefbfd;
+    transform: scaleX(0);
+    transition: transform 250ms ease-in-out;
+}
+h1:hover::after{
+    transform: scaleX(1);
+
+}
+#image{
+    background: url(../images/naijaSports.jpg) center center no-repeat;
+    background-size: cover;
+    height: 290px;
+    margin: 0 20px 20px 20px;
+}
+#people{
+    display: flex;
+    padding-left: 15px;
+}
+.poeple{
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.people p{
+    border-right: 1px dashed #f8cf15;
+    padding: 5px; 
+}
+.people p:last-of-type{
+   border: 1px 0;
+}
+.people h3{ 
+    text-decoration: underline;
+    color: rgb(77, 1, 42);
+}
+.people p:hover{
+    box-shadow: 2px 2px 1px #292800, -2px -2px 1px #292800;
+    border-radius: 6px;
+    font-size: 17px;
+}
+#remove{
+    border-right: none;
+}
+#economy{
+    display: flex;
+   
+}
+.economy{
+    text-align: justify;
+    padding-left: 5px;
+}
+article section h2{
+    color: #d4d113;
+    font-size: 20px;
+}
+.more{
+    color: #010518;
+    display: block;
+    text-decoration: underline;
+}
+.more:hover{
+    cursor: pointer;
+}
+
+
+
+#economy{
+    display: flex;
+    padding-left: 15px;
+}
+.economy{
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.economy p{
+    border-right: 1px dashed #f8cf15;
+    padding: 5px; 
+}
+.economy p:last-of-type{
+   border: 1px 0;
+}
+.economy h3{ 
+    text-decoration: underline;
+    color: rgb(77, 1, 42)
+}
+.economy p:hover{
+    box-shadow: 2px 2px 1px #292800, -2px -2px 1px #292800;
+    border-radius: 6px;
+    font-size: 17px;
+}
+
+#culture{
+    display: flex;
+    padding-left: 15px;
+}
+.culture{
+    text-align: justify;
+    padding-left: 5px;
+    padding-right: 15px;
+}
+.culture p{
+    border-right: 1px dashed #f8cf15;
+    padding: 5px; 
+}
+.culture p:last-of-type{
+   border: 1px 0;
+}
+.culture h3{ 
+    text-decoration: underline;
+    color: rgb(77, 1, 42)
+}
+.culture p:hover{
+    box-shadow: 2px 2px 1px #292800, -2px -2px 1px #292800;
+    border-radius: 6px;
+    font-size: 17px;
+}
+footer{
+    background: #292920;
+    height: 100px;
+    text-align: center;
+    color: white;
+    padding-top: 10px;
+    opacity: 0.8;
+}
