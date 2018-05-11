@@ -1,0 +1,138 @@
+.main{
+    border: 1px solid #000000;
+    height: 500px;
+    width: 800px;
+    margin-left: 200px;
+    margin-top: 200px;
+    border: 5px solid #41093e;
+}
+.side{
+    float: right;
+}
+.main{
+    display: flex;
+    background: url(../images/lion.jpeg) no-repeat center center;
+    background-size: 800px auto;
+}
+.fparagraph h1{
+    font-size: 20px;
+    color: #3e0349;
+}
+.fparagraph p{
+    font-size: 13px;
+    margin-right: 20px;
+    color: #8d0e82;
+}
+#submit{
+    padding-top: 30px;
+}
+.name{
+    font-size: 17px;
+    padding-top: 10px;
+    color: #09000a;
+}
+.name small{
+    font-size: 15px;
+    color: #300d03;
+}
+.name input{
+    width: 300px;
+}
+.name input:hover{
+    border: 1px solid #e70707;
+    height: 25px;
+}
+
+.email{
+    font-size: 17px;
+    padding-top: 10px;
+    color: #0b010c;
+}
+.email small{
+    font-size: 15px;
+    color: #300d03;
+}
+.email input{
+    width: 300px;
+}
+.email input:hover{
+    border: 1px solid #e70707;
+    height: 25px;
+}
+
+.subject{
+    font-size: 17px;
+    padding-top: 10px;
+    color: #0e010f;
+}
+.subject small{
+    font-size: 15px;
+    color: #300d03;
+}
+.esubject input{
+    width: 300px;
+}
+.subject input:hover{
+    border: 1px solid #e70707;
+    height: 25px;
+}
+#subject{
+    color: black;
+}
+
+.message{
+    font-size: 17px;
+    padding-top: 10px;
+    color: #0c010e;
+}
+.message small{
+    font-size: 15px;
+    color: #300d03;
+}
+.message input{
+    width: 300px;
+}
+.message input:hover{
+    border: 1px solid #e70707;
+    height: 25px;
+}
+.message textarea{
+    height: 98px;
+    width: 100px;
+    border: 1px solid black;
+    color: black;
+}
+.message textarea:hover{
+    border: 1px solid  #e70707;
+    height: 109px;
+    width: 200px;
+}
+
+
+.ouremail{
+    font-size: 15px;
+    line-height: 5px;
+    padding-top: 20px;
+    color: #41093e;
+}
+.ouremail p{
+    font-size: 15px;
+}
+.phone{
+    font-size: 15px;
+    line-height: 5px;
+    padding-top: 20px;
+    color: #41093e;
+}
+.phone p{
+    font-size: 15px;
+}
+.web{
+    font-size: 15px;
+    line-height: 5px;
+    padding-top: 20px;
+    color: #41093e;
+}
+.web p{
+    font-size: 15px;
+}
