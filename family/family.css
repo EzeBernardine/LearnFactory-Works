@@ -1,0 +1,232 @@
+header.main .eze{
+     text-align: left;
+     padding-left: 100px;
+     border: 1px solid #463b02  ;
+     background-color: #301101;
+     color: #f0cd8c;
+     margin: 0;
+}
+header, section, div, article, p{
+    display: block;
+}
+header #eze{
+    height: 20px;
+    width: auto;
+    float: left;
+    padding: 12px 0 20px 20px;
+}
+.maindiv .search{
+    border: 1px solid #272003;
+    width: 150px;
+    border-radius: 20px;
+    background-color: #bbaa72;
+    float: right;
+    margin-top: -33px;
+    margin-right: 10px;
+}
+.maindiv .submit{
+    float: right;
+    margin-top: -31px;
+    margin-right: 14px;
+    width: 20px;
+    border-radius: 9px;
+    border: none;
+    background-color: #ddcd9a;
+}
+nav .nav ul{
+    border: 1px solid #0e0b00;
+    background-color:  #fefefe;
+    margin: 0;
+    text-align: right;
+}
+.five{
+    background-color: #f9f7f6;
+}
+nav .nav li{
+    display: inline;
+    padding-left: 20px;
+}
+nav .nav a{
+    color:  #f39407;
+    text-decoration: none;
+    text-align: right;
+}
+section .five .first{
+    height: 500px;
+    width: 300px;
+    border: 1px solid #160b02;
+    background-color: #301101;
+}
+
+section .five .first:hover{
+   background: url(../images/FB_IMG_1497036211091.jpg) no-repeat;
+   position: relative;
+   background-size: 300px 450px;
+   animation-name: fadeIn;
+   animation-duration: 2s;
+   background-color: white;
+}
+@keyframes fadeIn{
+    from {
+    transform: translatex(20px);
+    }
+    to {
+        transform: translatex( 0px);
+    }
+    }
+
+section .five .second{
+    height: 550px; 
+   width: 300px;
+   border: 1px solid #f9f7f6;
+   background-color: #f2efee;
+   margin-top: -275px;
+   margin-left: 170px;
+   transform: rotate(16deg);
+}
+section .five .third{
+    height: 500px;
+    width: 300px;
+    border: 3px solid  #f1efee;
+    margin-top: -583px;
+    margin-left: 250px;
+    position: relative;
+    background-color:   #f3f0ef;
+}
+section .five .third:hover{
+    background: url(../images/me3.jpg) no-repeat;
+    position: relative;
+    background-size: 300px 450px;
+    animation-name: fadeIn;
+   animation-duration: 2s;
+   background-position-y: -60px;
+   background-color: white;
+}
+@keyframes fadeIn{
+    from {
+    transform: translatex(20px);
+    }
+    to {
+        transform: translatex( 0px);
+    }
+    }
+section .five .forth{
+    height: 550px; 
+   width: 300px;
+   border: 1px solid#301101;
+   background-color:#301101;
+   margin-top: -280px;
+   margin-left: 470px;
+   transform: rotate(16deg);
+}
+section .five .fifth{
+    height: 500px;
+    width: 300px;
+    border: 1px soli #301101;
+    
+    margin-top: -582px;
+    margin-left: 550px;
+    position: relative;
+    background-color:   #301101;
+}
+section .five .fifth:hover{
+    background: url(../images/ngo.jpg) no-repeat;
+    position: relative;
+    background-size: 300px 450px;
+    animation-name: fadeIn;
+   animation-duration: 2s;
+   background-position-y: -160px;
+   background-color: white;
+}
+@keyframes fadeIn{
+    from {
+    transform: translatex(20px);
+    }
+    to {
+        transform: translatex( 0px);
+    }
+    }
+section .five .sixth{
+    height: 550px; 
+   width: 300px;
+   border: 1px solid #f3f0ef;
+   background-color:   #f3f0ef;
+   margin-top: -262px;
+   margin-left: 770px;
+   transform: rotate(16deg);
+   position: relative;
+}
+section .five .seventh{
+    height: 500px;
+    width: 300px;
+    border: 1px solid   #f3f0ef;;
+   
+    margin-top: -594px;
+    margin-left: 852px;
+    position: relative;
+    background-color:  #f3f0ef;
+}
+section .five .seventh:hover{
+    background: url(../images/ulo2.jpg) no-repeat;
+    position: relative;
+    background-size: 300px 450px;
+    animation-name: fadeI;
+   animation-duration: 2s;
+   background-position-y: -60px;
+   background-color: white;
+}
+@keyframes fadeI{
+    from {
+    transform: translatex(-20px);
+    }
+    to {
+        transform: translatex( 0px);
+    }
+    }
+section .five .eight{
+    height: 550px; 
+   width: 50px;
+   border: 1px solid  #301101;
+   background-color: #301101;
+   margin-top: -310px;
+   margin-left: 1070px;
+   transform: rotate(16deg);
+}
+section .five .eight2{
+    height: 400px; 
+   width: 100px;
+   border: 1px solid   #301101;
+   background-color: #301101;
+   margin-top: -406px;
+   margin-left: 1100px;
+   transform: rotate(10deg);
+}
+section .five .ninth{
+    height: 500px;
+    width: 200px;
+    border: 1px solid  #301101;
+    background-color: #301101;
+    margin-top: -300px;
+    float: right;
+}
+.sectionpara{
+    font-size: 20px;
+    position: relative;
+   
+}
+.art{
+    height: 500px;
+    width: 1275px;
+    border: 1px solid #8f6136;
+    background-color: #f7e7de;
+    position: relative;
+    margin-top: 0px;
+}
+.secfive{
+    height: 300px;
+    width: 1275px;
+    border: 1px solid #8f6136;
+    background-color:#f0cd8c;
+    position: relative;
+    margin-top: 0px;
+}
