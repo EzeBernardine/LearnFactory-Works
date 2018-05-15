@@ -1,4 +1,4 @@
-div; header; section{
+div, header, section{
     display: block;
 }
 section .all{

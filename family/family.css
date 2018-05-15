@@ -24,23 +24,30 @@ header #eze{
     margin-top: -33px;
     margin-right: 10px;
 }
+#search .search:hover{
+    border: 2px solid #e19b04;
+    background-color: #f3f0ec;
+}
 .maindiv .submit{
     float: right;
-    margin-top: -31px;
-    margin-right: 14px;
+    margin-top: -32px;
+    margin-right: 15px;
     width: 20px;
     border-radius: 9px;
     border: none;
+    color:  #ddcd9a;
     background-color: #ddcd9a;
+}
+.maindiv .submit:hover{
+    border: 1px solid #0e0b01;
+    background-color: #180e01;
+    color: #f3e9e9;
 }
 nav .nav ul{
     border: 1px solid #0e0b00;
     background-color:  #fefefe;
     margin: 0;
     text-align: right;
-}
-.five{
-    background-color: #f9f7f6;
 }
 nav .nav li{
     display: inline;
@@ -50,6 +57,34 @@ nav .nav a{
     color:  #f39407;
     text-decoration: none;
     text-align: right;
+}
+ li.list a:hover{
+    color: #eeebe4;
+    font-size: 15px;
+    border: 2px solid #221802;
+    background-color: #f39407;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+section .secfive{
+    height: 300px;
+    width: 1275px;
+    border: 1px solid #8f6136;
+    background-color:#f0cd8c;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+}
+.secfive .familyname{
+    color: #080401;
+    font-size: px;
+}
+.secfive .myfamily{
+    color: #c0430a;
+    padding: 0 300px;
+}
+.five{
+    background-color: #f9f7f6;
 }
 section .five .first{
     height: 500px;
@@ -214,19 +249,20 @@ section .five .ninth{
     position: relative;
    
 }
-.art{
-    height: 500px;
+footer .footer{
+    height: 315px;
     width: 1275px;
-    border: 1px solid #8f6136;
-    background-color: #f7e7de;
+    border: 1px solid #552602;
+    background-color: #552602;
     position: relative;
+    color: #d8a589;
     margin-top: 0px;
+    text-align: center;
 }
-.secfive{
-    height: 300px;
-    width: 1275px;
-    border: 1px solid #8f6136;
-    background-color:#f0cd8c;
-    position: relative;
-    margin-top: 0px;
+footer p{
+    color: #d8a589;
+    text-align: center;
+    margin: 100px 400px 0 400px;
+    font-size: small;
+
 }
