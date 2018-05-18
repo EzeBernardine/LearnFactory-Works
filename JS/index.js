@@ -86,7 +86,7 @@
 //else{
 //    alert("permisson denied");
 //}
-   
+
 //let access;
 //let no="you do not have a parental access";
 //let yes="you have a parental access";
@@ -134,7 +134,7 @@
 // let number=prompt("enter a number");
 // // if(number=="11" && number.length==2){
 // //     alert("eleven");
-        
+
 // // }else{
 // //     alert("you entered"+number);
 // // }
@@ -162,12 +162,12 @@
 //       }else{
 //             alert("you dont have an active account");
 //       }
-      
+
 // }else{
 //       alert("incorrect account number");
-      
+
 // }
-    
+
 
 
 
@@ -183,10 +183,10 @@
 //       }else{
 //             alert("you dont have an active account");
 //       }
-      
+
 // }else{
 //       alert("incorrect account number");
-      
+
 // }
 
 
@@ -226,61 +226,135 @@
 //       alert("this is not a number");
 //     }
 
-      
 
 
 
+num = prompt("enter a number");
+// let length = (num.length);
+// let toNumber = Number(num);
+const arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+// let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let convert = num.split("");
+
+// let foo = convert.map(item => Number(item));
+// alert(foo.reduce((a,c) => a + " " + arr[c], ""));
 
 
-
-
-
-let num=prompt("enter a number");
-let length=(num.length);
- let toNumber=Number(num);
-
-//let i=prompt("enter a number");
-let arr=["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine" ];
-let fig=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-
-let a=fig[0];
-let b=fig[1];
-let c=fig[2];
-let d=fig[3];
-let e=fig[4];
-let f=fig[5];
-let g=fig[6];
-let h=fig[7];
-let k=fig[8];
-let j=fig[9];
-
-
-let A=arr[0];
-let B=arr[1];
-let C=arr[2];
-let D=arr[3];
-let E=arr[4];
-let F=arr[5];
-let G=arr[6];
-let H=arr[7];
-let K=arr[8];
-let J=arr[9];
-
- 
-
-
- for(let i=0 ; i<=length ;  i++){
-      if(length==2  && num.charAt(0)==a   && num.charAt(1)==a){
-            alert( num.charAt(0) );
-        }else{
-             
-        }    
-                 
+function numm(str){
+      let val= " " , newvar=" ";
+      for (let i = 0; i <= length; i++) {
+            newvar=parseInt(str[i]);
+            val=val+ " " + arr[newvar];
       }
+      alert(`${str} in wordes is :${val}`)
+}
+
+numm(num);
 
 
-let z="ty";
-let y="hundred";
+
+
+//  let result=convert.concat(fig);
+//  let sorted=result.sort((a,b)=>a.b);
+
+
+
+// let num = prompt("enter a number");
+// let length = (num.length);
+// let toNumber = Number(num);
+// let arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+// let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let convert = num.split("");
+// let a = fig[0];
+// let b = fig[1];
+// let c = fig[2];
+// let d = fig[3];
+// let e = fig[4];
+// let f = fig[5];
+// let g = fig[6];
+// let h = fig[7];
+// let k = fig[8];
+// let j = fig[9];
+
+
+// let A = arr[0];
+// let B = arr[1];
+// let C = arr[2];
+// let D = arr[3];
+// let E = arr[4];
+// let F = arr[5];
+// let G = arr[6];
+// let H = arr[7];
+// let K = arr[8];
+// let J = arr[9];
+
+
+// for (let i = 0; i <= length; i++) {
+
+//       if (num[i] == a) {
+//             alert(A);
+//       } else if (num[i] == b) {
+//             alert(B);
+//       } else if (num[i] == c) {
+//             alert(C);
+//       } else if (num[i] == d) {
+//             alert(D);
+//       } else if (num[i] == e) {
+//             alert(E);
+//       } else if (num[i] == f) {
+//             alert(F);
+//       } else if (num[i] == g) {
+//             alert(G);
+//       } else if (num[i] == h) {
+//             alert(H);
+//       } else if (num[i] == k) {
+//             alert(K);
+//       } else if (num[i] == j) {
+//             alert(J);
+//       } else { }
+
+// }
+// for(let i=length; i==length; i++){ 
+      
+         
+//  for ( i = 0; i <= length; i++) 
+//  {
+//          convert.forEach((item,index,array)=>
+//       {
+//             alert(item);
+     
+//             if((item==  fig[0] ) 
+//             || (item==  fig[1] )
+//             || (item==  fig[2] )
+//             || (item==  fig[3] ) 
+//             || (item==  fig[4] )
+//             || (item==  fig[5] ) 
+//             || (item==  fig[6] )
+//             || (item==  fig[7] ) 
+//             || (item==  fig[8] )
+//             || (item==  fig[9] ) )
+//                   {
+//                   let arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+//                   let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+//                   alert(convert);
+//                  // alert((num[0]));
+//                  // convert.shift();
+//                   convert[0]=arr[i];
+//                  // let shifted=  convert.shift(); 
+//                   alert(convert); 
+//                   }
+//       })
+//  }
+     
+//      //let poped=  convert.shift(); 
+//      //alert(poped);
+//     // convert[0]=arr[i];
+// }
+
+
+
+// let z="ty";
+// let y="hundred";
 
 
 // alert(A + " " + B+ " " + C + " " + D+ " " + E+ " " + F+ " " + G+ " " + H+ " " + K+ " " + J);
@@ -294,28 +368,7 @@ let y="hundred";
 
 
 
- 
-// if(num[i]==a) {
-//       alert(A);
-// }else if(num[i]==b){
-//       alert(B);
-// }else if(num[i]==c){
-//       alert(C);
-// }else if(num[i]==d){
-//       alert(D);
-// }else if(num[i]==e){
-//       alert(E);
-// }else if(num[i]==f){
-//       alert(F);
-// }else if(num[i]==g){
-//       alert(G);
-// }else if(num[i]==h){
-//       alert(H);
-// }else if(num[i]==k){
-//       alert(K);
-// }else if(num[i]==j){
-//       alert(J);
-// } else{}
+
 
 
 //  if(num=="1"){
@@ -386,7 +439,9 @@ let y="hundred";
 
 
 
-// var browser = prompt("What is your browser type?");
+
+// var browser = prompt("What is your browser type?" , (" Edge,  Safari, chrome, Firefox, Opera"));
+
 // switch (browser) {
 //   case "Edge":
 //     alert("You've got the Edge!");
@@ -395,10 +450,12 @@ let y="hundred";
 //   case "Firefox":
 //   case "Safari":
 //   case "Opera":
-//     alert("Okay we support the browsers too");
+//   alert( browser );
+//     alert("Okay we support the " + browser +" too");
 //     break;
 //   default:
-//     alert("We hope that this page looks ok!");
+//   alert( browser );
+//     alert("We hope that this " + browser +" looks ok!");
 // }
 // if (browser === "Edge") {
 //   alert("You've got the Edge!");
@@ -430,27 +487,87 @@ let y="hundred";
 //   alert('2, 3');
 // }
 // let a = +prompt("a?", "");
-
 // switch (a) {
-
 //   case 0:
-
 //     alert(0);
-
 //     break;
-
 //   case 1:
-
 //     alert(1);
-
 //     break;
-
 //   case 2:
-
 //   case 3:
-
 //     alert("2, 3");
-
 //     break;
-
 // }
+
+
+//replacing an array elementl
+// let arr=["apple", "mango", "orange", "banana", "tangeline" , []];
+// let anum=[1,5,5,5,5,4,5,5,4,1,2,2, ];
+//removing an element fromthe endof an array
+//arr.shift();
+//alert(arr);
+//removing the last element froman array
+//arr.pop();
+//alert(arr);
+//adding an element to the end of an array
+//arr.push("pineapple");
+//adding an element from the beginning
+//arr.unshift("udara");
+//alert(arr);
+// the mang bellow is referncing each of the index of the array. this is used to lop through an array
+// for (let mang of arr){
+//       alert(arr);
+//       break;
+// }
+/////to convert theelements of an array as a string
+//lettoSrting=String(arr);
+///alert(anum[4][0]);
+// let mode =[];
+// mode[0]="goat";
+// mode.push("lion");
+// mode[1][5]="bird";
+//alert( mode );
+///// using splice to remove a particular element from an array
+// arr.splice(4);
+// alert(arr);
+
+
+//alert( anum.slice(0, 4));
+/////to revert an array,it changes the order of anarray position
+//arr.reverse();
+//alert(arr);
+/////sorting an array
+//let sortin=arr.sort(function(a, b)
+//{ return(a-b);}
+//)
+
+//sorting can alsobe writtn as
+//let sorted=anum.sort((a,b)=>a.b);
+//alert(sorted);
+////concatnation
+
+//let result=arr.concat(anum, names);
+
+// let sortResult=result.sort((a,b)=>a.b);
+// alert(sortResult);
+//alert(result.indexOf("ada"));
+// function fuc(name){
+//     let  names=[1, 2, 3, 4, 5, 6, 7, 8 ];
+//       let newname = Number(prompt("what name do you want to remove"));
+//       if(names.indexOf(newname) !== -1){
+//             alert(names.indexOf(newname));
+
+//             let lop=names.splice(names.indexOf(newname), 1);
+// alert(lop);
+// alert(names);
+
+//       }
+// }
+// fuc(name);
+// let mongopark=["apple", "mango", "orange", "banana", "tangeline" ];
+// mongopark.forEach((item, index, array)=>{
+//       alert(item);
+// })
+
+
