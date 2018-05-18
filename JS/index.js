@@ -230,26 +230,26 @@
 
 
 num = prompt("enter a number");
-// let length = (num.length);
-// let toNumber = Number(num);
+let length = (num.length);
+let toNumber = Number(num);
 const arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-// let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-// let convert = num.split("");
+let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let convert = num.split("");
 
-// let foo = convert.map(item => Number(item));
-// alert(foo.reduce((a,c) => a + " " + arr[c], ""));
+let foo = convert.map(item => Number(item));
+alert(foo.reduce((a,c) => a + " " + arr[c], ""));
 
 
-function numm(str){
-      let val= " " , newvar=" ";
-      for (let i = 0; i <= length; i++) {
-            newvar=parseInt(str[i]);
-            val=val+ " " + arr[newvar];
-      }
-      alert(`${str} in wordes is :${val}`)
-}
+// function numm(str){
+//       let val= " " , newvar=" ";
+//       for (let i = 0; i <= length; i++) {
+//             newvar=parseInt(str[i]);
+//             val=val+ " " + arr[newvar];
+//       }
+//       alert(`${str} in wordes is :${val}`)
+// }
 
-numm(num);
+// numm(num);
 
 
 
