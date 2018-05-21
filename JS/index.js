@@ -605,3 +605,54 @@ function greeting(){
 greeting();
 
 //using a parameter with a function
+function Name(first, second)//parameters
+{
+      alert(first +" "+"is a son of " +second);
+}
+Name("oluchi", "chidinma");//arguements
+Name("Bernardine", "Eze");
+
+//declaring a variable in a function.---this is a local scope---re-assigning variables
+y=4;
+function addNumbers(){
+      let x=3;
+      y=10;
+      alert(x+y);
+}
+alert(y);
+addNumbers();
+y=10;
+alert(y);
+
+//return statement
+function studentName(){
+      let firstName="grace";
+      let lastName="anthony";
+      let name=firstName +lastName;
+      return name;
+}
+console.log(studentName());
+
+//classwork
+function funcName(){
+      let myNumbers=[[20, 12, 24, 5, 6], [1, 15, 8, 23, 10, 45], [7, 300, 9, 12, 4, 89] ];
+      let map=myNumbers.reduce((new, result, newresult)=>new.{}{
+            alert(map);
+      })
+}
+funcName();
+
+//eg 2 
+function checkAge(age){
+  if (age >= 18){
+    alert("you can go to the club");
+  } else if (age < 18){
+     confirm("do you have parental permission?");
+    alert("you have gotten parental permission!!");
+  } else {
+    alert("get out of here swine");
+  }
+
+}
+age = prompt("How old are you?");
+checkAge(age);
