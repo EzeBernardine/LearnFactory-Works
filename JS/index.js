@@ -154,17 +154,28 @@
 
 
 
-// if(prompt("input your account number")=="2019"){
-//       alert("correct account number");
+
+
+
+
+
+
+
+
+
+
+
+// if(prompt("input your password")=="2019"){
+//       alert("correct password number");
 //        if(prompt("input active account code") =="0012"){
-//             alert("your account balance is 20,000,000,000");
-//             alert("Sir Mathew, thank you for banking with us");
+//             alert("you have been transfered a some of 20,000,000,000");
+//             alert("Miss Bernar, thank you for beleving us");
 //       }else{
 //             alert("you dont have an active account");
 //       }
 
 // }else{
-//       alert("incorrect account number");
+//       alert("incorrect password");
 
 // }
 
@@ -229,27 +240,30 @@
 
 
 
-num = prompt("enter a number");
-let length = (num.length);
-let toNumber = Number(num);
-const arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
-let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-let convert = num.split("");
+//  num = prompt("enter a number");
+// let length = (num.length);
+// let toNumber = Number(num);
+//  const arr = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight","nine"];
+// let fig = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let convert = num.split("");
 
-let foo = convert.map(item => Number(item));
-alert(foo.reduce((a,c) => a + " " + arr[c], ""));
+// let foo = convert.map(item => Number(item));
+// alert(foo.reduce((a,c) => a + " " + arr[c], ""));
 
 
-// function numm(str){
+//  function numm(str){
 //       let val= " " , newvar=" ";
-//       for (let i = 0; i <= length; i++) {
+//       for (let i = 0; i <=length; i++) {
 //             newvar=parseInt(str[i]);
 //             val=val+ " " + arr[newvar];
-//       }
+// 			}
+// 			if{lenth }
 //       alert(`${str} in wordes is :${val}`)
 // }
 
-// numm(num);
+//  numm(num);
+
+
 
 
 
@@ -571,3 +585,23 @@ alert(foo.reduce((a,c) => a + " " + arr[c], ""));
 // })
 
 
+//function syntax
+function function-name{function-body}
+
+//to call a function
+function-name();
+
+//eg on funtion ---this is called a name function because it has a name; greeting
+function greeting(){
+      alert("Hi my name is Eze Bernardine")
+}
+greeting();
+
+//Writing a function that collect the name of users and greet you byyour name
+function greeting(){
+      let name=prompt("what is your name");
+      alert("Good morning "+" "+name);
+}
+greeting();
+
+//using a parameter with a function
