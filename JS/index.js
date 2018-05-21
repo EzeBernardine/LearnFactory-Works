@@ -329,14 +329,14 @@
 
 // }
 // for(let i=length; i==length; i++){ 
-      
-         
+
+
 //  for ( i = 0; i <= length; i++) 
 //  {
 //          convert.forEach((item,index,array)=>
 //       {
 //             alert(item);
-     
+
 //             if((item==  fig[0] ) 
 //             || (item==  fig[1] )
 //             || (item==  fig[2] )
@@ -359,7 +359,7 @@
 //                   }
 //       })
 //  }
-     
+
 //      //let poped=  convert.shift(); 
 //      //alert(poped);
 //     // convert[0]=arr[i];
@@ -586,72 +586,84 @@
 
 
 //function syntax
-function function-name{function-body}
+function function-name{ function-body }
 
 //to call a function
 function-name();
 
 //eg on funtion ---this is called a name function because it has a name; greeting
-function greeting(){
+function greeting() {
       alert("Hi my name is Eze Bernardine")
 }
 greeting();
 
 //Writing a function that collect the name of users and greet you byyour name
-function greeting(){
-      let name=prompt("what is your name");
-      alert("Good morning "+" "+name);
+function greeting() {
+      let name = prompt("what is your name");
+      alert("Good morning " + " " + name);
 }
 greeting();
 
 //using a parameter with a function
 function Name(first, second)//parameters
 {
-      alert(first +" "+"is a son of " +second);
+      alert(first + " " + "is a son of " + second);
 }
 Name("oluchi", "chidinma");//arguements
 Name("Bernardine", "Eze");
 
 //declaring a variable in a function.---this is a local scope---re-assigning variables
-y=4;
-function addNumbers(){
-      let x=3;
-      y=10;
-      alert(x+y);
+y = 4;
+function addNumbers() {
+      let x = 3;
+      y = 10;
+      alert(x + y);
 }
 alert(y);
 addNumbers();
-y=10;
+y = 10;
 alert(y);
 
 //return statement
-function studentName(){
-      let firstName="grace";
-      let lastName="anthony";
-      let name=firstName +lastName;
+function studentName() {
+      let firstName = "grace";
+      let lastName = "anthony";
+      let name = firstName + lastName;
       return name;
 }
 console.log(studentName());
 
 //classwork
-function funcName(){
-      let myNumbers=[[20, 12, 24, 5, 6], [1, 15, 8, 23, 10, 45], [7, 300, 9, 12, 4, 89] ];
-      let map=myNumbers.reduce((new, result, newresult)=>new.{}{
-            alert(map);
-      })
+function funcName() {
+      myNumbers = [[20, 12, 24, 5, 6], [1, 15, 8, 23, 10, 45], [7, 300, 9, 12, 4, 89]];
+
+      c = myNumbers[0].reduce((a, b) => a + b) 
+      alert(c);
+      d = myNumbers[1].reduce((a, b) => a + b)
+      alert(d);
+      e = myNumbers[2].reduce((a, b) => a + b)
+      alert(e);
+      c=c*0.2;
+      d=d*0.2;
+      e=e*0.2;
+      var newArray = [];
+      newArray.push(c);
+      newArray.push(d);
+      newArray.push(e);
+      alert(newArray);
 }
 funcName();
 
-//eg 2 
-function checkAge(age){
-  if (age >= 18){
-    alert("you can go to the club");
-  } else if (age < 18){
-     confirm("do you have parental permission?");
-    alert("you have gotten parental permission!!");
-  } else {
-    alert("get out of here swine");
-  }
+//eg 2  cheking  age and permission using function
+function checkAge(age) {
+      if (age >= 18) {
+            alert("you can go to the club");
+      } else if (age < 18) {
+            confirm("do you have parental permission?");
+            alert("you have gotten parental permission!!");
+      } else {
+            alert("get out of here swine");
+      }
 
 }
 age = prompt("How old are you?");
