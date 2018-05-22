@@ -690,7 +690,7 @@ arr.forEach(function(any, index, arr){
      console.log(any, index);
 });
 
-//filter
+//filter using ES5
 let numbers=[52, 68, 5, 41, 2, 36, 2, 14, 64, 92, 62, 5, 632, 1, 4, 17, 1, 5, 84];
 let filt=numbers.filter(function(figure){
     if(figure>20){ 
@@ -698,7 +698,32 @@ let filt=numbers.filter(function(figure){
 });
 console.log(filt);
 
-//another method for filter using es6
+//another method for filter using ES6
 let numbers=[8,96,4,96,456,85,4,12,8,7,85,96,4,6,8,62,630,620,26320];
 let filt=numbers.filter(figure=>figure>=85);
 console.log(filt);
+
+//the map function using ES5
+let resul=[{name:"adanme", age:"52", school:"lizzy"},
+          {name:"agaomuo", age: "12", school:"divine"},
+        {name:"ob, age",age:55, school:"oxford"}];
+let mapResult=resul.map(function(rer){
+    return (rer.name+ rer.age+ rer.school);
+})
+console.log(mapResult);
+
+//objexct
+let array=[];//for array
+let objexct={};//forobject
+let obj={one:1, two:2, three:3};//objects go with value and key
+let objString={name:"obi",
+               email:"demayous",
+               password:"hj852",
+               adress:"udogen street"};
+alert(objString.name)//obi
+alert(objString.email)//demayous
+alert(objString.name + objString.email) //obidemayous
+alert("name"+" "+objString.name+" " +"email" +" " +objString.email)              
+
+//using literal strings rather than ""
+alert(`Name:${objString.name} Email:${objString.email}`)
