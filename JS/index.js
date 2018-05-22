@@ -542,6 +542,7 @@
 // mode.push("lion");
 // mode[1][5]="bird";
 //alert( mode );
+
 ///// using splice to remove a particular element from an array
 // arr.splice(4);
 // alert(arr);
@@ -551,6 +552,7 @@
 /////to revert an array,it changes the order of anarray position
 //arr.reverse();
 //alert(arr);
+
 /////sorting an array
 //let sortin=arr.sort(function(a, b)
 //{ return(a-b);}
@@ -637,20 +639,22 @@ console.log(studentName());
 function funcName() {
       myNumbers = [[20, 12, 24, 5, 6], [1, 15, 8, 23, 10, 45], [7, 300, 9, 12, 4, 89]];
 
-      c = myNumbers[0].reduce((a, b) => a + b) 
+      firstIndex = myNumbers[0].reduce((sum, currentValue) => sum + currentValue)
       alert(c);
-      d = myNumbers[1].reduce((a, b) => a + b)
+      secondIndex = myNumbers[1].reduce((sum, currentValue) => sum + currentValue)
       alert(d);
-      e = myNumbers[2].reduce((a, b) => a + b)
+      thirdIndex = myNumbers[2].reduce((sum, currentValue) => sum + currentValue)
       alert(e);
-      c=c*0.2;
-      d=d*0.2;
-      e=e*0.2;
+      firstIndex = firstIndex * 0.2;
+      secondIndex = secondIndex * 0.2;
+      thirdIndex = thirdIndex * 0.2;
       var newArray = [];
-      newArray.push(c);
-      newArray.push(d);
-      newArray.push(e);
+      newArray.push(firstIndex);
+      newArray.push(secondIndex);
+      newArray.push(thirdIndex);
       alert(newArray);
+      let totalArray = newArray.reduce((sum, currentValue) => sum + currentValue)
+      alert(totalArray);
 }
 funcName();
 
@@ -668,3 +672,33 @@ function checkAge(age) {
 }
 age = prompt("How old are you?");
 checkAge(age);
+
+
+//function expression
+
+let myCoursemate = function (x,y) {
+      //expression
+      let mssage = x + y;
+      alert(message);
+}
+myCoursemate(52, 536);
+
+
+//the forEach method
+const arr=["hello", "good", "morning"]
+arr.forEach(function(any, index, arr){
+     console.log(any, index);
+});
+
+//filter
+let numbers=[52, 68, 5, 41, 2, 36, 2, 14, 64, 92, 62, 5, 632, 1, 4, 17, 1, 5, 84];
+let filt=numbers.filter(function(figure){
+    if(figure>20){ 
+    return true;}
+});
+console.log(filt);
+
+//another method for filter using es6
+let numbers=[8,96,4,96,456,85,4,12,8,7,85,96,4,6,8,62,630,620,26320];
+let filt=numbers.filter(figure=>figure>=85);
+console.log(filt);
