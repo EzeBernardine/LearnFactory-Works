@@ -760,12 +760,22 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     let rev = numbers.reverse();//this will output 6,66,9,4,62,6,56,66
     alert(rev);
 
-    //---10--//  split 
-    let numbers = [, 5, 64, 12, 6, 14, 11, 51];
-    let delim = numbers.split(', ');
-    for (let name of delim) {
-        alert(`A message to ${name}.`);
-    }
+    //---10--// The reduce method.
+    //It is used to add or determinethe sum of an array
+    //the syntax
+    arayname.reduce(sum, initial, index, array=>sum+current,0)
+    let arr=[23132,216,16,212,212,26,4,4,6,3,4];
+    let red=arr.reduce((sum,initial)=>sum+initial,0);//this will output 23835
+    alert(red);
+    let num=arr.reduce((sum,initial)=>sum-initial,0);//this  will output  -23835
+    alert(num);
+    let fig=arr.reduce((sum,initial)=>sum+initial,10);//this will output 23845
+    alert(fig);
+    //NOTE  the suminitially is 10
+    //-------the initial value is 23132
+    //------10 and 0 from the above one's is the initial sum
+
+    
 
 
 
@@ -931,3 +941,5 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
         let num = Number(arr);
 
     }
+
+    
