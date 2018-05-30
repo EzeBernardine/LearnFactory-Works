@@ -233,7 +233,7 @@
             newvar = parseInt(str[i]);
             val = val + " " + arr[newvar];
         }
-        if{ lenth }
+        if{ length }
       alert(`${str} in wordes is :${val}`)
     }
 
@@ -434,7 +434,7 @@
     //{ return(a-b);}
     //)
 
-    //sorting can alsobe writtn as
+    //sorting can also be writtn as
     //let sorted=anum.sort((a,b)=>a.b);
     //alert(sorted);
     ////concatnation
@@ -685,6 +685,7 @@
     //findIndex returns the index where the element wrer foun
     alert(fin.name + index + array);
 
+
     //--6---// filter ----it returns an array, and element and/or the index
     //syntax
     arrayName.filter(any, index, array => any.sth..)
@@ -774,10 +775,41 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     //NOTE  the suminitially is 10
     //-------the initial value is 23132
     //------10 and 0 from the above one's is the initial sum
+    //NOTE you can also ommit the iitail value which will authaumatically be zero
 
+    //---11--// forEach method
+    //it aloows to run the function for each element of the array
+    let ages=["ada", "obi", "adanne", "adaugo", "john", "emeka", "ebuka", "gilert", "anthony", "destiny", "frank"];
+    let each=ages.forEach((val,index,array)=>(  alert(`${val} is her name`)));//thhis wil alrt anthony is her name for intance for all the names 
     
+    //---12---// Array.isArray
+    //it is used to determine if the value is an array
+    //fron the above array,
+    alert(Array.isArray(ages));//this will alert true because the value ages is an array
 
 
+//Hoisting
+//The JavaScript engine treats all variable declarations using “var” as if they are declared at the top of a functional scope(if declared inside a function) or global scope(if declared outside of a function) regardless of where the actual declaration occurs. This essentially is “hoisting”.
+//This is simply for instance
+x=2;
+alert(x);//this will alert 2
+var x;
+//x was declared after it has been used, sowill be hoisted
+alert( nam);
+var nam="41";//this will alert undefined because initalization is before the alert
+//but if
+alert( x);//this will alert an error
+let x="2";
+//this is beause everything above the let statement is in the deadzone.  The interpreter does not execute it.
+//x was initialized after it has been used that is why is will not alert an error
+//Therefore,  hoisting is the process of declaring a variable after using it. But you cannot initalize a variableafter using it. That is to say that, inialized variablesare not hoisted.
+// Therefore hoising is the process of taking all declared variables on top of the progrem before excuting the program.
+
+   
+//Math
+//this allwos you to perform mathematical task
+Math.PI;            // returns 3.141592653589793
+Math.round(x) returns the value of x rounded to its nearest integer
 
     //objexct
     let array = [];//for array
@@ -858,7 +890,7 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     }
 
 
-    //using a shorter way
+    //using a shorter way.
     let emptyobj = {};
     Object.assign(destination[objec1, objec2]);
     Object.assign(emptyobj, names);// you are assigning  the value of
@@ -935,11 +967,11 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     //TOY question number two
     //1. Determine if a string is a palindrum or not without using higher functions
     //
-    //Attemptng the parlingrum
+    //Attemptng the parlindrum
     let arr = prompt("input a word");
     if (arr.length %== 0) {
         let num = Number(arr);
 
     }
 
-    
+  
