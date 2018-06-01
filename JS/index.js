@@ -590,7 +590,7 @@
     console.log(mapResult);
 
 
-
+//ALL ABOUT ARRAYS
     //TO ADD OR REMOVE FROM AN ARRAY
     //       slice
     //       splice
@@ -625,7 +625,7 @@
     //NOTE--the  new array returned converts all stings to just arrays--Eg
     let numbers = ["20", "99", "46", "9",];
     let sli = numbers.slice(1, 3);// thi will give you 99,46
-    sli = numbers.slice(-3);//when its a negative value, it starts counting from the back. It aslo makes usof one input ie -3
+    sli = numbers.slice(-3);//when its a negative value, it starts counting from the back. It aslo makes use of one input ie -3
     alert(sli);
 
 
@@ -670,9 +670,9 @@
     let present = numbers.includes(4);//this will output true
     alert(present);
 
-//--5--// find--findIndex---It is used in an array of objects to find an object
-//syntas
-.//find returns one element
+    //--5--// find--findIndex---It is used in an array of objects to find an object
+    //syntas
+    .//find returns one element
     arrayName.find(function (anyWord, index, array) { anyWord == "pick any word in the array" })
     let customer = [
         { id: 001, name: "Ada Mike", product: "Milk", email: "ada@gmail.com" },
@@ -716,8 +716,8 @@
 
     //---7--// the map---it give  you a new array. When you wanna select some numbersand print then out, use filter; else, map will return true or false.
     //the syntax
-    let result = arr.map(function (item, index, array)//the item is the individaul items
-let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
+    let result = arr.map(function (item, index, array);//the item is the individaul items
+    let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     let result = arr.map(val => val > 15);//this will output false,true,false,true,false,false,false,false,true
     alert(result);
     let customer = [
@@ -761,6 +761,15 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     let rev = numbers.reverse();//this will output 6,66,9,4,62,6,56,66
     alert(rev);
 
+    //---8--1--//join
+    //its like the opp of Array.from() method. it joins an array to form a string . it is also used to join an element in between the alresdy esixting arrray.
+    //NOTE it accomodates one parameter, ie the element you want to join into the array.
+    //syntax
+    arrayName.join();
+    let numbers=["mango","apple","orange"];
+    alert(numbers.join(""));//this will output  mangoappleorange  as a string
+    alert(numbers.join("looking"));//tis will alert mangolookingapplelookingorange   as a string
+
     //---10--// The reduce method.
     //It is used to add or determinethe sum of an array
     //the syntax
@@ -787,31 +796,198 @@ let arr = [5, 61, 6, 16, 1, 3, 01, 11, 251];
     //fron the above array,
     alert(Array.isArray(ages));//this will alert true because the value ages is an array
 
+    //---13--//Array.from()
+    ///this s used tp convert a string to an array
+    //the syntax
+    Array.from(arrayName);
+    //NOYE space are treated like characters
+    let nubers="my love life";
+    alert(Array.from(nubers));//this will output m,y, ,l,o,v,e, ,l,i,f,e
+
 
 //Hoisting
-//The JavaScript engine treats all variable declarations using “var” as if they are declared at the top of a functional scope(if declared inside a function) or global scope(if declared outside of a function) regardless of where the actual declaration occurs. This essentially is “hoisting”.
-//This is simply for instance
-x=2;
-alert(x);//this will alert 2
-var x;
-//x was declared after it has been used, sowill be hoisted
-alert( nam);
-var nam="41";//this will alert undefined because initalization is before the alert
-//but if
-alert( x);//this will alert an error
-let x="2";
-//this is beause everything above the let statement is in the deadzone.  The interpreter does not execute it.
-//x was initialized after it has been used that is why is will not alert an error
-//Therefore,  hoisting is the process of declaring a variable after using it. But you cannot initalize a variableafter using it. That is to say that, inialized variablesare not hoisted.
-// Therefore hoising is the process of taking all declared variables on top of the progrem before excuting the program.
+    //The JavaScript engine treats all variable declarations using “var” as if they are     declared at the top of a functional scope(if declared inside a function) or global scope    (if declared outside of a function) regardless of where the actual declaration occurs.     This essentially is “hoisting”.
+    //This is simply for instance
+    x=2;
+    alert(x);//this will alert 2
+    var x;    //x was declared after it has been used, sowill be hoisted
+    alert( nam);
+    var nam="41";//this will alert undefined because initalization is before the alert
+    //but if
+    alert( x);//this will alert an error
+    let x="2";
+    //this is beause everything above the let statement is in the deadzone.  The interpreter     does not execute it.
+    //x was initialized after it has been used that is why is will not alert an error
+    //Therefore,  hoisting is the process of declaring a variable after using it. But you     cannot initalize a variableafter using it. That is to say that, inialized variablesare not     hoisted.
+    // Therefore hoising is the process of taking all declared variables on top of the progrem     before excuting the program.
 
    
 //Math
-//this allwos you to perform mathematical task
-Math.PI;            // returns 3.141592653589793
-Math.round(x) returns the value of x rounded to its nearest integer
+    //this allwos you to perform mathematical task
+    Math.PI;            // returns 3.141592653589793
+    Math.round(x) //returns the value of x rounded to its nearest integer;
+    Math.pow(x, y) //returns the value of x to the power of y:
+    Math.sqrt(x) //returns the square root of x
+    Math.abs(x) //returns the absolute (positive) value of x://Example
+    Math.abs(-4.7);     // returns 4.7 
+    Math.floor(x) //eturns the value of x rounded down to its nearest integer:Example
+    Math.floor(4.7);    // returns 4 
+    Math.sin(x) //returns the sine (a value between -1 and 1) of the angle x (given in radians)              .if you want to use degrees instead of radians, you have to convert degrees to                 adians:Angle in radians = Angle in degrees x PI / 180.Example
+    Math.sin(90 * Math.PI / 180);     // returns 1 (the sine of 90 degrees) 
+    Math.cos(x) //returns the cosine (a value between -1 and 1) of the angle x (given in                      radians).If you want to use degrees instead of radians, you have to convert                    degrees to dians:Angle in radians = Angle in degrees x PI / 180.Example
+    Math.cos(0 * Math.PI / 180);     // returns 1 (the cos of 0 degrees) 
+    Math.min() and Math.max() //can be used to find the lowest or highest value in a list of                    arguments:Example
+    Math.min(0, 150, 30, 20, -8, -200);  // returns -200 Example
+    Math.max(0, 150, 30, 20, -8, -200);  // returns 150 
+    Math.random() //returns a random number between 0 (inclusive),  and 1 (exclusive):
 
-    //objexct
+
+
+//OBJECTS    
+    let  names=["gd","dvks","gdv","egcd","ehwebh"];
+    alert(typeof names);//this will display an object
+    let myName="bernardine";
+    alert(typeof myName);//this will display string
+    //that means an array is also an object
+    var myString = new String("I'm a String object");
+    alert(typeof myString);//this will display string
+
+    //The strig objects
+    //syntaxfor a string object
+    let newString=new Strig("this si a string");
+    //you can also use a primitive string to rep a string  object becausethe  javascript will do the conversion to an object for you
+    let newString="this is a strng";
+
+    //The properties of a string-----the length propertiy
+    var myName = "Jeremy";
+    document.write(myName.length);//will write the length of the string "Jeremy" (that is, 6 ) to the page.   
+
+    //String methods
+    //---1---// indexOf() and lastIndexOf()
+    //they are  used to  check the position of a character in astring
+    var myString = "Hello jeremy. How are you Jeremy";
+    var foundAtPosition = myString.indexOf("Jeremy");
+    alert(foundAtPosition);//this will alet 26 which is the character position of th second name(case sensitivity)
+    foundAtPosition = myString.lastIndexOf("Jeremy");
+    alert(foundAtPosition);//this will alert 26 which is gotten by startingfrom the last index to check
+
+    //----2---// substr() and substring() Methods
+    //they are both used to copy part of a string
+    //syntax for substring
+    arrayName.substring("the index you wanr=t to cut from", "the index before which you want to cut to")
+    let myString="Bernardine";
+    let mySubString=myString.substring(0,7);
+    alert(mySubString);//This will alert Bernard
+    //syntax for substr()
+    arrayName.substr("the index from which you want to cut from","the length of the string you want to cut")
+    let myString="Bernardine";
+    let mySubString=myString.substr(0,7);
+    alert(mySubString);//This will also alert Bernard
+    //NOTE the second parameter is optional. if you do not include it, the whole characters from the starting positon will be printed
+
+    //---3---// toLowerCase() and toUpperCase() Methods
+    ///they are both used to change the case of a character
+    //the syntax of both do not take any parameters
+    let myString="this is my Name dear";
+    alert(myString.toLowerCase());//This will display this is my name dear
+    alert(myString.toUpperCase());//This will alert THIS IS MY NAME DEAR
+
+    //---4--// charAt() and charCodeAt() Methods
+    //it is used to reference the characters of an object
+    //syntax for charAt()
+    charAt("an index position")
+    let myName="Bernardine";
+    alert(myName.charAt(7));//this will alert the character i
+    //syntax for charCodeAt()
+    //it also takes one parameter, but display the character-code-of the index
+    let myName="Bernardine";
+    alert(myName.charCodeAt(7));//this will display 105
+    //Chaaractercodes go seqeuentially
+    a-z-----97up
+    A-Z-----65up
+    0-9-----48-57
+
+    //---5---// fromCharCode()method
+    //syntax
+    String.fromCharCode("the numbersyou want to fund their their charCode")
+    //NOTE the string is constant, you don't eed to declare it. It hepls convert the values from the convert intoa string
+    //it is used to convert a bunch of character code nubers to its equivalent alphabet ornumbers
+    //syntax
+    fromCharCode();
+    var myString = String.fromCharCode(65,66,67);
+    alert(myString);//this will alert ABC
+    let alpha="";
+    for(let char=65; char<=90; char++){
+            alpha=alpha +" "+ String.fromCharCode(char);
+    }
+    alert(alpha);//this will alert A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+    //---6---//trim() method.
+    //it is used to remove white spaces from astring andreturns the new string
+    //syntax
+    arrayName.trim()
+    let numbers=" Princess";
+    numbers=numbers.trim();
+    if(numbers=="Princess"){
+        alert(numbers);
+    }
+   let numbers=" Princess";
+    numbers=numbers.trim();
+    if(numbers=="Princess"){
+        alert(numbers);//this will display Princess not minding the spacebefore the princess
+    }
+
+    //---7--//the split() method
+    //syntax
+    arrayName.split("",lmit)
+    let numbers="dsjfiunjnjfnjnsdjhui";
+    //if the seperator is an empty string, an array of characters is returned
+    alert(numbers.split(""))  ;  //this will output d,s,j,f,i,u,n,j,n,j,f,n,j,n,s,d,j,h,u,i
+    alert(numbers.split(j))  ; //this will alert not defined
+    //if no seperator is specified at all,an array containing the input strng is returned
+    alert(numbers.split()) ;//this will output  dsjfiuwefnjnsdjhui
+    alert(numbers.split("", 2)) ;//this will output   d,s
+    alert(numbers.split("2"))  ; //this will output  dsjfiuwefnjnsdjhui
+    //alert(numbers.split(nj)) ;//this will return jn not defined
+    //when the seperator is an element inside the array, it changes it to a comma
+    alert(numbers.split("nj")) ;//thiw will output dsjfiu,,f,nsdjhui
+    let numbers="dsjfiunjnjfnjnsdjhui";
+    alert(numbers.split("j")) ;//this will output ds,fiun,n,fn,nsd,hui
+
+    //---8---//replace
+    //it returns a new string with the changed word
+    //syntax
+    arrayName.replace("word to change", "word to changed to")
+    let name="adanma is a very ggod girl girlanda very obidientt one at that as well as adaeze";
+    let obi="i love eating and praying";
+    alert(name.replace("ada", obi))//this willalert i love eatung and prayingnma is a very ggod girl girlanda very obidientt one at that as well as adaeze
+    alert(name.replace("ada","obi"));//this will output obinma is a very ggod girl girlanda very obidientt one at that s well as adaeze
+
+    //---9--//search
+    //search helps  yo find if a wordiscontainedin a string. if it is, it returns the index.if its not, it returns -1
+    //syntax
+    arrayName.search("item")
+    let paragraph="theeaarlier yu come, the better for you dearie";
+    alert(paragraph.search("come"));//this will output 15
+    alert(paragraph.search("came"));//this willoutput -1
+
+    //----10--//match
+    //it is similar to the saerch method, but returns an array of the matched item
+    //syntax
+    arrayName.match("item");
+    let word="the incoruptable state administratuon od the independent judiciary is really alarming";
+    alert(word.match("judiciaryis"));//this will return null
+    alert(word.match("judiciary is"));//thie=swill return judiciary is
+
+
+//DOM    
+    
+
+
+
+
+
+//objexct
     let array = [];//for array
     let objexct = {};//forobject
     let obj = { one: 1, two: 2, three: 3 };//objects go with value and key
@@ -853,8 +1029,8 @@ Math.round(x) returns the value of x rounded to its nearest integer
         adress: "udogen street"
     };
     for (let prop in objString) {//this is the {for in }method
-        console.log(prop)// i am looping throughthe object and i am alerting all the propertis
-        console.log(objString[prop]);// thiswill give me their keyes
+       //console.log(prop);// i am looping throughthe object and i am alerting all the propertis
+       // console.log(objString[prop]);// thiswill give me their keyes
     }
 
     //changing the keyes of an object and assigning them to a new object
@@ -886,16 +1062,16 @@ Math.round(x) returns the value of x rounded to its nearest integer
     //cloning an object
     let emptyobj = {};
     for (let key in names) {
-        emptyobj[key] = names[key];
-    }
-
-
+       // emptyobj[key] = names[key];
+        };
+    
+    
     //using a shorter way.
     let emptyobj = {};
     Object.assign(destination[objec1, objec2]);
     Object.assign(emptyobj, names);// you are assigning  the value of
 
-    //caveates is a waring or a notice-----obj are stored by reference while primitive data type is stored by the actual values
+    //caviates is a waring or a notice-----obj are stored by reference while primitive data type is stored by the actual values
     function print() {
         var name = "victor";
         var file;

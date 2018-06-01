@@ -5,102 +5,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script>
-        alert("man" + document.body);//this will display mannull meaning that man doesnot exist. The word null means   dors not exist
-    </script>
-    <title>
-        this is my initial title
-    </title>
+    <title>this is my initial title</title>
 </head>
 
 <body>
-    <div>
-        About DOm
-    </div>
-    <ul>
-        <li>information</li>
-        <li>knowledge</li>
-    </ul>
-    <div>
-        end
-    </div>
-    <script>
-        //this is used to change the name of the title. It is in a script tag because its in javascript
-        document.title = "new1";
+    <div id="output">this is my first header dear</div>
+    <div class="divTwo">this is my first class</div>
+    <div class="secondClass">this is my secondclass</div>
 
-        //thiswill display body content[object HTMLBodyElement]
-        alert("body content" + document.body);
-
-        //document.getElementById("rat").childNodes[0]
-        //this willdisplay  document.getElementById(...) is null. thisis because the id is not  present
-
-        for (let i = 0; i < document.body.childNodes.length; i++) {
-            alert(document.body.childNodes[i]);
-            //this will alert [object Text] because alert does not dispay object cntents
-
-            console.log(document.body.childNodes[i]);
-            //this will display tall this. Note text tags ae all including
-            // 12: 45: 47.504
-            // #text "
-            // "
-            // dom.html: 38: 13
-            // 12: 45: 48.419
-            //     < div >
-            //     dom.html: 38: 13
-            // 12: 45: 49.392
-            // #text "
-            // "
-            // dom.html: 38: 13
-            // 12: 45: 50.231
-            //     < ul >
-            //     dom.html: 38: 13
-            // 12: 45: 51.143
-            // #text "
-            // "
-            // dom.html: 38: 13
-            // 12: 45: 51.922
-            //     < div >
-            //     dom.html: 38: 13
-            // 12: 45: 52.615
-            // #text "
-            // "
-            // dom.html: 38: 13
-            // 12: 45: 53.249
-            //     < script >
-
-            //  times and that is because there are 8 nodes in the page including the text nodes
-
-            console.log(document.body.children[i]);
-            //thiis wil display
-        //     12: 54: 12.171
-        //         < div >
-        //         dom.html: 68: 15
-        //     12: 54: 12.173
-        //         < ul >
-        //         dom.html: 68: 15
-        //     12: 54: 12.174
-        //         < div >
-        //         dom.html: 68: 15
-        //     12: 54: 12.177
-        //         < script >
-        //         dom.html: 68: 15
-        //     12: 54: 12.178 undefined
-        //     dom.html: 68: 15
-       // NOTE the text nodes are not included
-         }
-
-        document.title="home is sweet";//his changes the title naame 
-        
+<script>
+   console.log(document.getElementById("output"))
 
 
-
-
-
-
-
-
-
-    </script>
+</script>
 </body>
-
 </html>
+
+
+
+
+
