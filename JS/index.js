@@ -980,7 +980,15 @@
     alert(word.match("judiciary is"));//thie=swill return judiciary is
 
 
-//DOM    
+//DOM 
+   //usin this as a case study
+   <body>
+    <div id="output">this is my first header dear</div>
+    <div class="divTwo">this is my first class</div>
+    <div class="secondClass">this is my secondclass</div>
+   </body>
+   let myFirstDiv=document.getElementById("output");
+   myFirstDiv.style.color="blue";   //this changed the colour of the div tag content
     
 
 
