@@ -998,8 +998,8 @@
    document.getElementById("idName")
    let myFirstDiv=document.getElementById("output");
    console.log(myFirstDiv);//this consoled <div id="output">
-   //to style any reference id, just ptu
-   .style.stlyeType="";
+   //to style any reference id, just put
+   .style."stlyeType"="";
    myFirstDiv.style.color="blue";   //this changed the colour of the div tag content
     myFirstDiv.style.padding=" 100px 0 0 200px";//t[0]his changed the padding positions
 
@@ -1046,6 +1046,44 @@
     //it is used to return the reference of the root element 
     let doc=document.documentElement;
     console.log(doc);//this outputed <html lang="en">
+    console.log(doc.elementObjectProperty)
+
+    
+    //--6--//element object
+    //this is used to expose only properties and methods
+    let doc=document.documentElement;
+    console.log(doc)//this will output <html lang="en">
+    
+   
+    //--7--//the tagName property 
+    ///this is a way of getting an element tag name
+    //it is  used to refernce the tag name of the element
+    let doc=document.documentElement;
+    console.log(doc.tagName)//this will output HTML
+
+    //--8--//methods of he Element Object
+    //--8a---//the getAttibute() method
+    //it returns the value of the supplied attribute and null if the attribute doesnot exist
+    //syntax
+    arrayName.getAttribute(attributename)
+    //--8b-//the setAttribute()
+    //it is used to set thr value of an attribute
+    //syntax
+    arrayName.setAttribute(attributeName)
+    //--8c--//the removeAtttribute method
+    //its used to remove the value of an attribute and set it to default
+    //syntax
+    arrayName.removeAttribute(attributeName)
+    //example
+    let newId=document.getElementById("output");
+    console.log(newId.setAttribute("align" ,"right"))//this will display the the content  with the id tothe right
+    alert(newId.getAttribute("align" ))//this will display right
+    console.log(newId.removeAttribute("align" ,"right"))//this will remove the value of the attribute
+
+    
+      
+ 
+    
 
 
     
