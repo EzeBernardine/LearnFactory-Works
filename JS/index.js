@@ -981,15 +981,75 @@
 
 
 //DOM 
-   //usin this as a case study
+   //using this as a case study
    <body>
     <div id="output">this is my first header dear</div>
     <div class="divTwo">this is my first class</div>
     <div class="secondClass">this is my secondclass</div>
+    <ul class="list">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
    </body>
+   //--1--// document.getElementById("idName")
+   //to reference a particula id tag, you use
+   document.getElementById("idName")
    let myFirstDiv=document.getElementById("output");
+   console.log(myFirstDiv);//this consoled <div id="output">
+   //to style any reference id, just ptu
+   .style.stlyeType="";
    myFirstDiv.style.color="blue";   //this changed the colour of the div tag content
+    myFirstDiv.style.padding=" 100px 0 0 200px";//t[0]his changed the padding positions
+
+
+    //--2--//document.getElementsByTagName("tagname")[index]
+    //to selectany tag(s) you use
+    document.getElementsByTagName("tagname")
+    let tagName=document.getElementsByTagName("div");
+    console.log(tagName);//this consoled HTMLCollection(3) [ div#output, div.divTwo, div.secondClass ]
+    //to select any of the collections
+    first  document.getElementsByTagName("tagname")[index]
+    secondly   tagName[0];//where tagName is a variable
+    console.log(tagName[0]);//this displayed <div id="output">
+    let tagName=document.getElementsByTagName("div");
+    tagName[1].style.padding=" 100px 0 0 200px";//this padded the second div tag
+    tagName[1].style.color="red";//this changed the color
+    //NOTE you cannot use a tag name without specifying the index
+
+    //---3---//document.queryselector
+    //this is used select the first element that matches the provided selector
+    //syntax
+    document.queryselectpr(".-class-or-#-id  a-space  the-tag-name")
+    let queryy=document.querySelector(".secondClass span")
+    console.log(queryy);//this displayed <span>
+    queryy.style.color="red";//this displayed the span content red
+
+    //-4--//document.queryselectorAlll("")
+    //this is used to  select all the elemnts that matches the selector
+    //syntax
+    document.querySelectorAll(".class-or-#id  a-space  the-tag-na")
+    //toselect any of the list
+     document.querySelectorAll(".class-or-#id  a-space  the-tag-name")[index]
+    let allQuerry=document.querySelectorAll(".secondClass span")
+    allQuerry[2].style.color="yellow";
+    console.log(allQuerry);//this displayed NodeList(3) [ span, span, span ]
+    //NOTEto modify allthe list,  you coulduse aloop.
+    for(let i=0; i<allQuerry.length; i++){
+        alert(allQuerry[i].style.color="yellow");//this will alert the color yellow and also take effect
+        alert(allQuerry[i].style.padding=" 100px 0 0 200px");//this will alert the padding dimensions and also take effect
+    }//this changed all the colors at once, and gave each paddings 
+
+
+    //--5--//document.documentElement
+    //it is used to return the reference of the root element 
+    let doc=document.documentElement;
+    console.log(doc);//this outputed <html lang="en">
+
+
     
+
 
 
 
@@ -1151,11 +1211,18 @@
     //TOY question number two
     //1. Determine if a string is a palindrum or not without using higher functions
     //
-    //Attemptng the parlindrum
+    //Attemptng the palindrome
     let arr = prompt("input a word");
     if (arr.length %== 0) {
         let num = Number(arr);
 
     }
 
-  
+    //a program written by Eazy  on web navigation
+    alert(location.href);//this will alert your current web address
+    if(confirm('Want to go to W3schools?')){//this will alert the question specified with a yes or  a no
+        location.href ='http://w3schools.com'//this takes you to the location
+    } else{
+        location.href = 'http://google.com'//this takes you the location if you click cancel
+    }
+    
