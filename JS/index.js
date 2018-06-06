@@ -743,6 +743,8 @@
     console.log(sorrt);
     //sorting using arrow function
     let numbers = [845, 41, 4, 96, 456, 85, 4, 12, 8, 7, 85, 96, 4, 6, 8, 62, 630, 620, 26320];
+    console.log(numbers.sort());//this will display [ 12, 26320, 4, 4, 4, 41, 456, 6, 62, 620, … ]its called dictionary sort
+    alert(numbers.sort((a,b)=>a-b));//this will alert 4,4,4,6,7,8,8,12,41,62,85,85,96,96,456,620,630,845,26320
     let sorrt = numbers.sort(function (a, b) {//a here is 845 and b is 9. then a again is 845 6and b is 9
         if (a < b) {
             return 1;
@@ -773,7 +775,7 @@
     //---10--// The reduce method.
     //It is used to add or determinethe sum of an array
     //the syntax
-    arayname.reduce(sum, initial, index, array=>sum+current,0)
+    arayname.reduce(sum, initial, index, array=>sum+current,initailSum)
     let arr=[23132,216,16,212,212,26,4,4,6,3,4];
     let red=arr.reduce((sum,initial)=>sum+initial,0);//this will output 23835
     alert(red);
@@ -789,7 +791,7 @@
     //---11--// forEach method
     //it aloows to run the function for each element of the array
     let ages=["ada", "obi", "adanne", "adaugo", "john", "emeka", "ebuka", "gilert", "anthony", "destiny", "frank"];
-    let each=ages.forEach((val,index,array)=>(  alert(`${val} is her name`)));//thhis wil alrt anthony is her name for intance for all the names 
+    let each=ages.forEach((val,index,array)=>(  alert(`${val} is her name`)));//thhis wil alert anthony is her name for intance for all the names one after the other
     
     //---12---// Array.isArray
     //it is used to determine if the value is an array
@@ -1029,7 +1031,9 @@
     //-4--//document.queryselectorAlll("")
     //this is used to  select all the elemnts that matches the selector
     //syntax
-    document.querySelectorAll(".class-or-#id  a-space  the-tag-na")
+    document.querySelectorAll(".class-or-#id  a-space  the-tag-na")//this querries every thing inside the document
+    //NOTE ---if i write 
+    output.querySelector("tagName")//i am quering every thing inside the output div only
     //toselect any of the list
      document.querySelectorAll(".class-or-#id  a-space  the-tag-name")[index]
     let allQuerry=document.querySelectorAll(".secondClass span")
@@ -1049,7 +1053,7 @@
     console.log(doc.elementObjectProperty)
 
     
-    //--6--//element object
+    //--6--//documentElementt
     //this is used to expose only properties and methods
     let doc=document.documentElement;
     console.log(doc)//this will output <html lang="en">
@@ -1078,19 +1082,111 @@
     let newId=document.getElementById("output");
     console.log(newId.setAttribute("align" ,"right"))//this will display the the content  with the id tothe right
     alert(newId.getAttribute("align" ))//this will display right
-    console.log(newId.removeAttribute("align" ,"right"))//this will remove the value of the attribute
+    console.log(newId.removeAttribute("align" ,"right"))//this will remove the value of the attributeand set it to default
+   
 
-    
+    //--9--//node object
+    let doc=document.documentElement;
+    let headEr=doc.firstChild;
+    console.log(headEr)//this will alert <head>
+    let firstId=document.getElementById("output")
+    console.log(firstId.firstChild)
+    console.log(firstId.lastChild)
+    console.log(firstId.nextSibling.nodeValue)
+    console.log(firstId.nodeName)
+    let lis =document.getElementsByClassName("list")
+    console.log(lis)
+    console.log(lis.firstChild)
+    console.log(lis.lastChild)
+    console.log(lis.nextSibling)
+    console.log(lis.nodeName)
+
+    //--10--//methods of node object
+    //--10a--//appendChild()
+    ///syntax
+    arrayName.appendChild()
+    //it adds an  extra node to the end of the child node
+    //--10b--//cloneNode()
+    //it is used to duplicate  a node. It accepts aboolen value: if true,both parent node and child nodes are duplicated, but if false, only the parent node is duplicated
+    //syntax
+    cloneNode(true or false)
+    //--10c--//hasChildNode()
+    //it returns true if the node has a child and false if it doesn't
+    //--10d--//removeNode(childode)
+    //it removes the childnodes of the Node object and returns theremoved node
+
+
+    //creating element and text in the DOM
+    //--11-a-//createElement("eiementname")
+    //this is used to create a node with the  specified elementname
+    let newElement=document.createElement("h2")//this will create a new element in the document
+    //---11b--//createTextElement("text")
+    //it osused to create and return  a text node with the specified text
+    let newText=document.createTextNode("Emeka is my friend, and Immanuel the love of my life")//this will create a new text in the already created element, h2
+     console.log(document.documentElement)///thiswil displsy  reference
+    newElement.appendChild(newText)
+    console.log(document.documentElement)//thi will contain the newElement and the newText
+    document.body.appendChild(newElement)//this will writ the write the newElement containing the newText to the body of the document
+    let newDoc=document.documentElement;
+    console.log(newDoc);//this contains in the element h2and the text newText 
+
+    //manipulating the DOM
+    //Changing appearancces cac be achievedwith twomethods
+    //-a-----using the style property
+    let newId=document.getElementById("spanned")
+    newId.style.color="green";//this will change the color of the text with the selected id
+    //   NOTE   //when a stlyName contains-a-hyphen, the syntax changes
+    newId.style.backgroundColor="red";//this changed the color of the background
+    newId.style.marginLeft="200px";//this  changed the margin
+    //to check for already existing style
+    let out=document.getElementById("output");
+    alert(out.style.color);//this this will alert an empty string
+    alert(out.style.marginLeft);//this will alert an empty strimg
+    alert(out.style.paddingLeft);//this alerted 20px
+    //NOTE you cannot retrive an attribute in a <style>, but can retrive an attribute in an inline style. This is because the inline style is contained dirctly to the idname
+    //--b----chsnging the value of the element class attrobute
+    let spanned=document.getElementById("spanned");
+    spanned.className="c-las";
+    alert(spanned.style.color);
+
+    //Positioning and moving content
+    let move=document.getElementById("spanned");
+    move.style.position="relative";
+    alert(move.style.position);//this will alert relative
+    move.style.left="400px";//this moved the positon 400px to the right
+
+
+// EVENTS  //
+    //using the two anchr tages for a case study
+    <a href="../" class="runanchor" onclick="return run()">GOING</a>//the return key word will return the return part of the function which is true: meaning it will allow the href to load
+    <a href="../" class="dontrunanchor" onclick="return dontRun()">GONE</a>//the return keyword will return the false return from the function,meaning it will not allow the href to load
+        function run() {
+            alert("you are about to go to another page")
+            return true;//this allows the href to load
+        }
+        
+        function dontRun() {
+            alert("surry you can't migrat to this page")
+            return false;//this prevebnts the hrefto load
+        }
+    //NOTE not objects and method makes use of the return key word    
       
- 
-    
-
 
     
 
 
+    
 
 
+
+
+
+//to install nodejs
+    curl -sl https://deb.nodesource.com/setup_8.x | sudo -E bash -
+    //after wich you type
+    sudo apt-get install -y nodejs
+    //to check for your current version
+    nodejs --version
 
 
 //objexct
@@ -1264,3 +1360,12 @@
         location.href = 'http://google.com'//this takes you the location if you click cancel
     }
     
+    //using template strings
+    let EzeBernardine="loveable";
+    console.log(`i am a  ${EzeBernardine} girl, and i am fair`)
+
+    //destructuring
+    let {name,age, year}=[];//this means thay name. year, and age are all arrays
+    let num=[1,3,6,84];
+    let [a,c,s,d]=num;
+    alert(a)//this will alert 1
