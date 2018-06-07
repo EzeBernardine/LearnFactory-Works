@@ -1,7 +1,7 @@
 
     body{
         overflow: hidden;
-        max-height: 600px;
+      
         background-color: #e9d5de;
     }
 .all{
@@ -11,6 +11,11 @@
     background-color: #29041d;
     color: #f0c5e7;
     margin-top: -10px;
+}
+.mainparagraph{
+    color: #d6c3d8;
+    margin-left: 55%;
+    padding-top: 1%;
 }
 .left{
     border: 1px solid #29041d;
@@ -25,7 +30,7 @@
     height: 50px;
     width: 31%;
     background-color: #29041d;
-    margin-top: -50px;
+    margin-top: -51px;
     transform: rotate(-9deg);
     float: right;
 }
@@ -38,18 +43,34 @@
 }
 .play{
     margin-left: 58%;
-    margin-top: 40px;
+    margin-top: 3%;
     background-color: #29041d;
-    position: relative;
+   
     margin-right:20%;
     height: 50px;
-    width: 250px;
+    width: 20%;
 }
-.start input{
-    margin-left: 85%;
+.board{
+    margin-left: 30%;
     border: 1px solid orangered;
+    height: 600%;
+    /* font-size: 20px; */
+    width: 35%;
+    background-color: #f7e5f1;
+    margin-top: 10%;
+    overflow: hidden;
+}
+.main-text{
+    text-align: center;
     height: 40px;
-    font-size: 20px;
-    width: 90px;
-    background-color: orangered;
+    margin-top: auto;
+    border: 1px solid #cc4405;
+    background-color: #ed4b10;
+    color: #54052d;
+    padding-top: 10px;
+}
+.board input{
+    margin-left: 80%;
+    margin-right: 20%;
+    margin-top: 200px;
 }

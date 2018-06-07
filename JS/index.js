@@ -1167,10 +1167,18 @@
         
         function dontRun() {
             alert("surry you can't migrat to this page")
-            return false;//this prevebnts the hrefto load
+            return false;//this prevebnts the href to load
         }
-    //NOTE not objects and method makes use of the return key word    
-      
+    //NOTE not objects and method makes use of the return key word   
+     <a href="../" class="dontrunanchor" onclick="handle(event)">this is an event</a>//the event passed as a parameter tells the type of event the anchor tag is undergoing
+     function handle(e){//e can be eny alphabet
+         alert(" you are on the right path")
+         alert(e.type)//this will alert click
+     }
+      function handle(e){//e can be eny alphabet
+         alert(" you are on the right path")
+         alert(e.type)//this will alert mouseover when you hover over the link
+     }
 
     
 
@@ -1180,13 +1188,22 @@
 
 
 
+//   REACT   //
+   //to install nodejs
+        curl -sl https://deb.nodesource.com/setup_8.x | sudo -E bash -
+        //after wich you type
+        sudo apt-get install -y nodejs
+        //to check for your current version
+        nodejs --version
+    //the STATE facilitates the rendering and re-rendering the react
+    //COMPONENTS is as portion of your app that house every other section (i think its like function)  React components is a javascript class
+    //Vertual Dom helps to improve performance. It does the mounting/updating on a main DOM. It is very fast
+    //MVC MODEL--database VIEW--UI   CONTROL--server
+    //Node servers enables multiple request at a time(synchronous ) but if the user has to wait for another user to revieve feedback before he can, it is called (asynchronous)
+    //React is just for VIEW: V, we use mongodp---for MODEL;M and NODE for CONTROL;C.
+    //React is front end
 
-//to install nodejs
-    curl -sl https://deb.nodesource.com/setup_8.x | sudo -E bash -
-    //after wich you type
-    sudo apt-get install -y nodejs
-    //to check for your current version
-    nodejs --version
+
 
 
 //objexct
