@@ -1157,30 +1157,63 @@
 
 
 // EVENTS  //
-    //using the two anchr tages for a case study
-    <a href="../" class="runanchor" onclick="return run()">GOING</a>//the return key word will return the return part of the function which is true: meaning it will allow the href to load
-    <a href="../" class="dontrunanchor" onclick="return dontRun()">GONE</a>//the return keyword will return the false return from the function,meaning it will not allow the href to load
-        function run() {
-            alert("you are about to go to another page")
-            return true;//this allows the href to load
-        }
+    //htmlevent properties
+        /--1--// onclick  
+        a href="../" class="runanchor" onclick="return run()">GOING</a>//the return key word     ill return the return part of the function which is true: meaning it will allow the     ref to load
+        a href="../" class="dontrunanchor" onclick="return dontRun()">GONE</a>//the return     eyword will return the false return from the function,meaning it will not allow the     ref to load
+           function run() {
+               alert("you are about to go to another page")
+               return true;//this allows the href to load
+           }
+           
+           function dontRun() {
+               alert("surry you can't migrat to this page")
+               return false;//this prevebnts the href to load
+           }
         
-        function dontRun() {
-            alert("surry you can't migrat to this page")
-            return false;//this prevebnts the href to load
-        }
-    //NOTE not objects and method makes use of the return key word   
-     <a href="../" class="dontrunanchor" onclick="handle(event)">this is an event</a>//the event passed as a parameter tells the type of event the anchor tag is undergoing
-     function handle(e){//e can be eny alphabet
-         alert(" you are on the right path")
-         alert(e.type)//this will alert click
-     }
-      function handle(e){//e can be eny alphabet
-         alert(" you are on the right path")
-         alert(e.type)//this will alert mouseover when you hover over the link
-     }
+        /---2--//ondblclick
+        /NOTE not objects and method makes use of the return key word   
+        <a href="../" class="dontrunanchor" onclick="handle(event)"> event</a>//this is     an//the event passed as a parameter tells the type of event the anchor tag is     responding to
+        <a href="../" ondblclick="handle(event)" onclick="return(false)"     class="doubl">DOUBLE_CLICK</a>;//thi alert  dblclick
 
-    
+        //--3--//onmousrover
+        <a href="../" class="dontrunanchor" onmouseover="handle(event)">this is a mouse     hover</a>//this will alert mouseover
+
+        //--4--//type and target
+         function handle(e){//e can be eny alphabet
+           if(e.type=="mouseover"){ 
+            alert(`you just hover over an item with `);
+            alert("the type is " + e.type);//the type is mouseover
+            alert(" the target is " + e.target);// the target is file:///home/bernadine/Desktop/LFclassworks/FR-Nig/
+           }
+           else if(e.type=="click"){
+               alert("you just clicked");
+               alert("the type is " + e.type);//the type is click
+               alert(" the target is " + e.target); //the target is file:///home/bernadine/Desktop/LFclassworks/FR-Nig/
+           }
+           else{
+            alert(" you just double clicked");
+            alert(" the target is " + e.target);// the target is file:///home/bernadine/Desktop/LFclassworks/FR-Nig/
+            alert(" the type is " + e.type)//the typeis dblclick
+           }
+        }
+
+    //handling event via object properties 
+         //NOTE the onclick is in the dom
+         function neww(){//this is the event handler function
+             alert(`this is the new  objet property`);
+         }
+         document.getElementsByClassName("doubl")[1].onclick=neww//this s the evemt object        //thi will help pass the event handler to the event object
+ 
+    //the standerd event handling procedure
+       //the twomethds of adding and removing EventListeners
+       //EVentTarget  is a way of adding or removing  listeners for an event from a target
+       //NOTE Every object node or element is an EventTarget
+       let link=document.getElementsByClassName("standard")[0];
+       link.addEventListener("click", function(e){
+           alert("this is the standerd event lister procedure");
+           e.preventDefault();//this will prevent the herf from loading
+       })
 
 
     
@@ -1202,6 +1235,21 @@
     //Node servers enables multiple request at a time(synchronous ) but if the user has to wait for another user to revieve feedback before he can, it is called (asynchronous)
     //React is just for VIEW: V, we use mongodp---for MODEL;M and NODE for CONTROL;C.
     //React is front end
+
+// consteuctor  //
+    const car=new objact()//this iswhat the javascriptengine looks sees. its the object constructor the enginr sees
+    const car={}    //this ca be the one you will write
+
+    function person(name, age, height){
+        this.name=name;//"this" here means the name parameter function and the nae iss the valueof the key
+        this.age=age;
+        this.height=height;
+
+    }
+    const mat=newperson(){
+        name:"mathew",
+        age:56;
+    }
 
 
 

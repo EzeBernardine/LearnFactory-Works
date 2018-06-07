@@ -10,7 +10,7 @@ class App extends Component {
   }
 
   setNewNumber= () => {
-    this.setState({})
+    this.setState({data: this.state.data+1})
   }
   render() {
     return (

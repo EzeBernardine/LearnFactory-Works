@@ -16,7 +16,7 @@ export default class Content extends Component{
     componentWillUpdate(nextProps, nextState){
         console.log("components will update")
     }
-    componentDIdUpdate(prevsProps, prevState){
+    componentDIdUpdate(prevProps, prevState){
         console.log("components did update")
     }
     render(){
