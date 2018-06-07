@@ -1206,6 +1206,7 @@
          document.getElementsByClassName("doubl")[1].onclick=neww//this s the evemt object        //thi will help pass the event handler to the event object
  
     //the standerd event handling procedure
+    //the standard event model application programming interface (API)
        //the twomethds of adding and removing EventListeners
        //EVentTarget  is a way of adding or removing  listeners for an event from a target
        //NOTE Every object node or element is an EventTarget
