@@ -1206,15 +1206,64 @@
          document.getElementsByClassName("doubl")[1].onclick=neww//this s the evemt object        //thi will help pass the event handler to the event object
  
     //the standerd event handling procedure
+    //syntax
     //the standard event model application programming interface (API)
+     let link=document.getElementsByClassName("className")[0];
+     link.addEventListener("the event type", eventfunctionhandler(){})
+      link.removeEventListener("the event type", event-function-handler(){})
        //the twomethds of adding and removing EventListeners
        //EVentTarget  is a way of adding or removing  listeners for an event from a target
        //NOTE Every object node or element is an EventTarget
        let link=document.getElementsByClassName("standard")[0];
-       link.addEventListener("click", function(e){
+       link.addEventListener("click", function(e){//thisai amethod
            alert("this is the standerd event lister procedure");
-           e.preventDefault();//this will prevent the herf from loading
+           e.preventDefault();//this is a method that will prevent the herf from loading
        })
+       //this can also be done this way
+       let link = document.getElementsByClassName("standard")[0];
+       function  linkClick(){
+           alert("this is the better way of using the standard API");
+       };
+       link.addEventListener("click", linkClick);
+       //this is a progam that changes an image and give the height and width
+       let image=[
+           "../images/us.jpg",
+           "../images/ulo2.jpg",
+           "../images/ngo.jpg",
+           "../images/apple2.jpeg",
+           "../images/regis.jpg"
+       ];
+     
+       function migrate(e){
+           console.log( e.target);
+           console.log("the type is " + e.type);
+           let theTarget=e.target;
+           let anyNumber=Math.round(Math.random()*3)   
+           alert("the index number is " + anyNumber);
+
+           while(theTarget.src.indexOf(image[anyNumber]) != -1){
+               Math.round(Math.random()*3)
+           }
+           theTarget.src=image[anyNumber];
+           theTarget.style.height="200px";
+           theTarget.style.width="auto";
+       };
+       function demigrate(e){
+           document.getElementsByClassName("emptydiv0")[0].innerHTML=("the source of the imsge is " + e.target.src);
+           document.getElementsByClassName("emptydiv1")[0].innerHTML=("the source of the image is " + e.target.src);
+           if(e.target.src.indexOf("images/apple2.jpeg") > -1){
+               alert("just got into the second div");
+               e.target.removeEventListener("click", migrate);
+               e.target.removeEventListener("click", demigrate);
+               alert("you can not go on again");
+           };
+       }
+       document.getElementById("img0").addEventListener("click", migrate );
+       document.getElementById("img0").addEventListener("click", demigrate );
+
+       document.getElementById("img1").addEventListener("click", migrate );
+       document.getElementById("img1").addEventListener("click", demigrate );
+
 
 
     
