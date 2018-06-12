@@ -1172,8 +1172,8 @@
            }
         
         /---2--//ondblclick
-        /NOTE not objects and method makes use of the return key word   
-        <a href="../" class="dontrunanchor" onclick="handle(event)"> event</a>//this is     an//the event passed as a parameter tells the type of event the anchor tag is     responding to
+        //NOTE not objects and method makes use of the return key word   
+        <a href="../" class="dontrunanchor" onclick="handle(event)"> event</a>//this is an//the event passed as a parameter tells the type of event the anchor tag is responding to
         <a href="../" ondblclick="handle(event)" onclick="return(false)"     class="doubl">DOUBLE_CLICK</a>;//thi alert  dblclick
 
         //--3--//onmousrover
@@ -1225,7 +1225,8 @@
            alert("this is the better way of using the standard API");
        };
        link.addEventListener("click", linkClick);
-       //this is a progam that changes an image and give the height and width
+
+    //this is a progam that changes an image and give the height and width and deletes the evetlistener if a particular picture pops out
        let image=[
            "../images/us.jpg",
            "../images/ulo2.jpg",
@@ -1233,14 +1234,12 @@
            "../images/apple2.jpeg",
            "../images/regis.jpg"
        ];
-     
        function migrate(e){
            console.log( e.target);
            console.log("the type is " + e.type);
            let theTarget=e.target;
            let anyNumber=Math.round(Math.random()*3)   
            alert("the index number is " + anyNumber);
-
            while(theTarget.src.indexOf(image[anyNumber]) != -1){
                Math.round(Math.random()*3)
            }
@@ -1260,9 +1259,49 @@
        }
        document.getElementById("img0").addEventListener("click", migrate );
        document.getElementById("img0").addEventListener("click", demigrate );
-
        document.getElementById("img1").addEventListener("click", migrate );
        document.getElementById("img1").addEventListener("click", demigrate );
+
+    //a prgram to to under line a text when the mouse hovers over it
+       function underline(e){ 
+           console.log(e.type);
+           console.log(e.target);
+           console.log(e.target.tagName);
+           if(e.target.tagName = "p"){
+             // alert("passed the tagname check");
+               if(e.type == "click"){
+                   alert("passed the mouse click check");
+                   e.target.className="under";
+                   console.log(e.clientX  + " and " + e.clientY);
+               }
+               else if(e.type == "mouseover"){
+                   alert("youpassed the mouseover check");
+                   e.target.className="clas";
+                   console.log(e.clientX  + " and " + e.clientY);
+               }
+           }else{
+               alert("you just reached the final stage and didnotachieveany thing")
+           }
+        }
+        document.getElementById("firstpara").addEventListener("click", underline);
+       document.getElementById('secondpara').addEventListener("mouseover", underline);
+
+    //--5--//mouseevent object properties
+       //--5a--//altKey
+       //iy tells if the altKey was pressed when the event occured
+       //syntax
+       //--5b--//clientX and Y
+       //it tells whichposition the mouse was vertically and horizontally when the event occured
+       syntax e.clientX and a.clientY
+       //--5c--//meteKey
+       //metaKey Indicates whether the meta key was pressed when the event was       generated
+       //--5d--//relatedTarget
+       //relatedTarget Used to identify a secondary event target. For mouseover events,this property references the element at which the mouse pointer       exited. For mouseout events, this property references the element at which the mouse pointer entered
+       //--5e--//screenX andcsreenY
+       //screenX Indicates the horizontal coordinates relative to the origin in the   screen
+       //screenY Indicates the vertical coordinates relative to the origin in the screen
+       //--5f--//shiftKey
+       //shiftKey Indicates whether the Shift key was pressed when the event was      generated
 
 
 
